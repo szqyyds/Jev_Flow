@@ -4,7 +4,7 @@
 
 ## 中文
 
-Jev Flow 是一个用于演示多轮、多步骤工具调用的 Python Agent。Jev 根据当前任务状态选择下一步动作与工具；DeepSeek 为所选工具提取参数，并在收集到足够信息后生成自然语言回答。Runtime 负责会话状态、参数校验、MCP 调用、失败处理和 Trace。
+Jev Flow 是一个用于演示多轮、多步骤工具调用的 Agent。Jev 根据当前任务状态选择下一步动作与工具；DeepSeek 为所选工具提取参数，并在收集到足够信息后生成自然语言回答。Runtime 负责会话状态、参数校验、MCP 调用、失败处理和 Trace。
 
 ### 功能
 
@@ -72,7 +72,6 @@ export DEEPSEEK_API_KEY="your-deepseek-key"
 python app.py --mode jev --generator deepseek --user me --session default --trace traces-loop.jsonl
 ```
 
-密钥仅通过环境变量提供，不要写入配置文件或提交到版本库。
 
 ### 常用命令
 
@@ -99,7 +98,6 @@ python app.py --mode jev --generator deepseek --user me --session default --trac
 我住在哪里
 ```
 
-同一 `--user` 与 `--session` 组合用于恢复本地会话。用户 ID 只是本地数据分组标识，不是身份认证。
 
 ### 项目结构
 
@@ -198,7 +196,6 @@ export DEEPSEEK_API_KEY="your-deepseek-key"
 python app.py --mode jev --generator deepseek --user me --session default --trace traces-loop.jsonl
 ```
 
-Provide credentials through environment variables. Do not put keys in configuration files or commit them.
 
 ### Commands
 
@@ -224,8 +221,6 @@ Example:
 What's the weather today?
 Where do I live?
 ```
-
-The same `--user` and `--session` pair restores a local session. The user ID is a local data partition key, not authentication.
 
 ### Project layout
 
