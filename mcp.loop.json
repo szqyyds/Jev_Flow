@@ -1,0 +1,42 @@
+{
+  "mcpServers": {
+    "local": {
+      "command": "${PYTHON}",
+      "args": [
+        "mcp_servers/local_tools.py",
+        "--root",
+        "."
+      ],
+      "timeout": 20,
+      "read_only_tools": [
+        "list_directory",
+        "read_text",
+        "search_files",
+        "text_stats",
+        "current_time"
+      ]
+    },
+    "weather": {
+      "command": "${PYTHON}",
+      "args": [
+        "mcp_servers/weather_tools.py"
+      ],
+      "timeout": 50,
+      "read_only_tools": [
+        "search_location",
+        "weather_forecast"
+      ]
+    },
+    "utility": {
+      "command": "${PYTHON}",
+      "args": [
+        "mcp_servers/utility_tools.py"
+      ],
+      "timeout": 20,
+      "read_only_tools": [
+        "calculate",
+        "date_offset"
+      ]
+    }
+  }
+}

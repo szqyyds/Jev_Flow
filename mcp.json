@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "local": {
+      "command": "${PYTHON}",
+      "args": ["mcp_servers/local_tools.py", "--root", "."],
+      "timeout": 15,
+      "read_only_tools": ["list_directory", "read_text", "search_files", "text_stats", "current_time"]
+    }
+  }
+}
